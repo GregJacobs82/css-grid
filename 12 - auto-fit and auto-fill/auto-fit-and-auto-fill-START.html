@@ -37,6 +37,8 @@
       display: grid;
       grid-gap: 20px;
       border: 10px solid var(--yellow);
+      grid-template-columns: repeat(auto-fill, 150px); /* Fills the defined grid space available */
+      grid-template-columns: repeat(auto-fit, 150px);  /* Re-sizes the grid space to "fit" the amount of space needed */
     }
   </style>
 </body>

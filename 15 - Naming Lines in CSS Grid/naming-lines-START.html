@@ -47,7 +47,23 @@
       display: grid;
       grid-gap: 20px;
       grid-template-columns: 1fr 500px 1fr;
+
+      /* NAME YOUR GRID LINES */
+      grid-template-columns: 
+      [site-left] 1fr 
+      [content-start] 500px 
+      [content-end] 1fr 
+      [site-right];
+
       grid-template-rows: repeat(10, auto);
+      grid-template-rows: [content-start] repeat(10, auto) [content-end]; /* NAME YOUR GRID ROWS */
+    }
+    .item3 {
+      background:slateblue;
+      /* grid-column: 2; */
+      grid-column: site-left; /* use the name of the grid line, assigned above in [] */
+      /* grid-row: 1 / span 10; */
+      grid-row: content-start / content-end; /* use the name of the grid row, assigned above in [] */
     }
   </style>
 </body>
